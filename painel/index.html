@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Painel JC Sales">
+  <title>JC Sales</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">JC <strong>Sales</strong></div>
+    <nav aria-label="Menu principal">
+      <button class="nav-item active" data-view="inicio">Início</button>
+      <button class="nav-item" data-view="clientes">Clientes</button>
+      <button class="nav-item" data-view="produtos">Produtos</button>
+      <button class="nav-item" data-view="pedidos">Pedidos</button>
+      <button class="nav-item" data-view="usuarios">Usuários</button>
+    </nav>
+    <div class="sidebar-note">Base inicial • sem APK</div>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Sistema comercial</p>
+        <h1 id="page-title">Visão geral</h1>
+      </div>
+      <span id="connection-status" class="status pending">Configuração pendente</span>
+    </header>
+
+    <section id="view-inicio" class="view active">
+      <div class="cards">
+        <article class="card"><span>Clientes</span><strong id="count-clientes">0</strong></article>
+        <article class="card"><span>Produtos</span><strong id="count-produtos">0</strong></article>
+        <article class="card"><span>Pedidos</span><strong id="count-pedidos">0</strong></article>
+        <article class="card"><span>Usuários</span><strong id="count-usuarios">0</strong></article>
+      </div>
+      <article class="panel">
+        <h2>Base oficial do JC Sales</h2>
+        <p>Esta tela já está separada por módulos e preparada para usar o Supabase somente quando necessário. Nenhum dado de demonstração é gravado automaticamente.</p>
+      </article>
+    </section>
+
+    <section id="view-clientes" class="view">
+      <article class="panel"><h2>Clientes</h2><p>Cadastro e consulta entrarão neste módulo, sem misturar código de produtos ou pedidos.</p></article>
+    </section>
+    <section id="view-produtos" class="view">
+      <article class="panel"><h2>Produtos</h2><p>Catálogo leve. Imagens ficarão em endereço externo e o Supabase guardará somente a URL.</p></article>
+    </section>
+    <section id="view-pedidos" class="view">
+      <article class="panel"><h2>Pedidos</h2><p>Pedidos serão montados localmente e enviados ao Supabase apenas ao salvar ou sincronizar.</p></article>
+    </section>
+    <section id="view-usuarios" class="view">
+      <article class="panel"><h2>Usuários</h2><p>Administrador e representantes usarão o mesmo sistema de autenticação, com permissões separadas.</p></article>
+    </section>
+  </main>
+
+  <script src="./js/config.js" onerror="window.JC_SALES_CONFIG = null"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
