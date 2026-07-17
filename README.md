@@ -40,12 +40,6 @@ Depois, em **Settings > Pages**, selecione **GitHub Actions** como fonte de publ
 
 ## Configuração do painel
 
-Copie:
+O arquivo `painel/js/config.js` já está configurado com a URL e a chave pública deste projeto Supabase.
 
-`painel/js/config.example.js`
-
-para:
-
-`painel/js/config.js`
-
-Preencha apenas a URL e a chave pública do Supabase. Nunca coloque senha do banco ou service role no painel.
+A chave pública pode ficar no painel porque a proteção real será feita pelas políticas RLS. Nunca coloque senha do banco, chave secreta ou `service_role` no repositório.
